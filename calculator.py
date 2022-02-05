@@ -1,17 +1,6 @@
-what = input("Что делаем? + , - , * , /" + ":")
-a = float(input("Введите первое число:"))
-b = float(input("Введите второе число:"))
-if what == "+":
-    c = a+b
-    print ("Результат:" + str(c))
-elif what == "-":
-    c = a-b
-    print("Результат:" + str(c))
-elif what == "*":
-    c = a*b
-    print("Результат:" + str(c))
-elif what == "/":
-    c = a/b
-    print("Результат:" + str(c))
-else:
-    print("Неверное действие!")
+operation = input('write the operation here: ') # writes the operation here , example 10 x 2 ÷ 2
+if 'x' in operation: # change all x for *
+    operation =  operation.replace('x','*')
+if '÷' in operation: # change all  ÷  for /
+    operation =operation.replace('÷','/')
+print(eval(operation)) #print the operation 
